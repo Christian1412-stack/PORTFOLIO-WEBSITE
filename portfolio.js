@@ -7,8 +7,10 @@ theme.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     if (body.classList.contains('dark-mode')) {
         theme.textContent = 'light-mode';
+        theme.classList.add('active');
     } else {
         theme.textContent = 'dark-mode'
+        theme.classList.remove('active')
     }
 });
 
