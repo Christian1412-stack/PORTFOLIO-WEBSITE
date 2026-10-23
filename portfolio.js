@@ -1,12 +1,19 @@
 const menuIcon = document.getElementById('menu-icon');
 const navLinks = document.querySelector('.nav-links');
+const theme = document.getElementById('theme');
+const body = document.body;
 
-menuIcon.addEventListener('click', (e) => {
+theme.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        theme.textContent = 'light-mode';
+    } else {
+        theme.textContent = 'dark-mode'
+    }
+});
+
+menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    // navLinks.innerHTML = `<ul id="hamburger">
-    // <li><a href="#About">About</li></a>
-    // li><a href="#Experience">Experience</li></a>
-    // li><a href="#Projects">Project</a></ul>`
 });
 
 const navLink = document.querySelectorAll('.nav-links li a');

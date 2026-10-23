@@ -15,6 +15,24 @@
     
     body {
         background-color: rgb(10, 65, 84);
+        transition: 0.3s ease
+    }
+    
+    body.dark-mode {
+        background-color: black;
+        color: #fff;
+    }
+    
+    #theme {
+        position: fixed;
+        background-color: gold;
+        padding: 8px 16px;
+        top: 1.2rem;
+        right: 2rem;
+        color: #000;
+        border-radius: 20px;
+        cursor: pointer;
+        z-index: 1001
     }
     
     .header {
@@ -75,6 +93,7 @@
     
     .visit-btn {
         padding: 0.8rem 1.5rem;
+        margin-right: -1px;
         border-radius: 3rem;
         border: none;
         font-weight: 500;
@@ -107,7 +126,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(10, 65, 84);
+        /* background-color: rgb(10, 65, 84); */
         color: white;
     }
     
@@ -205,7 +224,7 @@
     }
     
     #Experience {
-        background-color: #0f3f4d;
+        /* background-color: #0f3f4d; */
         color: white;
     }
     
@@ -518,7 +537,15 @@
         }
         .nav-links.active {
             display: block;
-            background-color: black;
+            color: green;
+            background-color: rgb(0, 0, 0);
+            transition: 5s ease-in;
+        }
+        .nav-links.active:hover {
+            background-color: skyblue;
+            color: black;
+            border: 4px black;
+            color: black
         }
         .btn-group {
             display: flex;
@@ -561,9 +588,6 @@
         body {
             /* border: 1px solid black; */
         }
-        .experience {
-            /* border: 1px solid red; */
-        }
         .experience h2 {
             display: flex;
             justify-content: center;
@@ -592,9 +616,6 @@
         }
         .nav-links.active {
             left: 0;
-        }
-        .experience {
-            /* border: 1px solid red; */
         }
         .grid-card {
             border: none;
@@ -663,5 +684,16 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+        #theme {
+            position: fixed;
+            background-color: gold;
+            padding: 8px 16px;
+            top: 5.2rem;
+            right: 1rem;
+            color: #000;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 1001
         }
     }
