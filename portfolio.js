@@ -6,10 +6,10 @@ const body = document.body;
 theme.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     if (body.classList.contains('dark-mode')) {
-        theme.textContent = 'light-mode';
+        theme.textContent = '☀️';
         theme.classList.add('active');
     } else {
-        theme.textContent = 'dark-mode'
+        theme.textContent = '🌙'
         theme.classList.remove('active')
     }
 });
